@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <section id="tops">
+      <h1>Please leave a message for us in our guestbook!</h1>
+      <h3>
+        Warning: other users will be able to see your messages, so please keep
+        it clean and appropriate, thanks!
+      </h3>
+      <form id="gbform">
+        <label for="username">Username:</label>
+        <input type="text" name="username" placeholder="Tell us your name!" />
+        <label for="message">Tell us about your visit!</label>
+
+        <textarea
+          placeholder="What did you get up to during your stay? What was the purpose of your visit?"
+          name="message"
+        ></textarea>
+
+        <label for="reaction">How was your time with us?</label>
+        <div>
+          <input type="radio" id="heart" name="reaction" value="💖" />
+          <label for="heart">💖</label>
+          <input type="radio" id="happy" name="reaction" value="😁" />
+          <label for="happy">😁</label>
+          <input type="radio" id="ok" name="reaction" value="🙂" />
+          <label for="ok">🙂</label>
+          <input type="radio" id="sad" name="reaction" value="😒" />
+          <label for="sad">😒</label>
+          <input type="radio" id="bad" name="reaction" value="😡" />
+          <label for="bad">😡</label>
+        </div>
+        <label for="returnValue">Would you stay with us again?</label>
+        <select name="returnValue" id="return">
+          <option value="Yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    <section id="bottoms">
+      <div></div>
+      <ul id="message-list"></ul>
+    </section>
+  </body>
+</html>
