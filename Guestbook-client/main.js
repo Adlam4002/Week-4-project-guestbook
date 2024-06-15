@@ -42,7 +42,7 @@ async function findMessages() {
   messageList.textContent = "";
   messageValues.forEach((message) => {
     const messageItem = document.createElement("li");
-    messageItem.id = "usermes";
+    messageItem.id = `usernames${message.id}`;
     messageItem.innerHTML = `<p><img src="https://avatar.iran.liara.run/public" alt="Avatar" width="50" height="50"> ${message.username}-${message.reaction}: ${message.message} Would they come back: ${message.return_value}.</p>`;
     messageList.appendChild(messageItem);
   });

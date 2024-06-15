@@ -36,7 +36,7 @@ app.post("/messages", async (req, res) => {
 });
 app.get("/message-list", async (req, res) => {
   const result = await db.query(`
-    SELECT username, message, reaction, return_value FROM guestbook
+    SELECT id, username, message, reaction, return_value FROM guestbook
     `);
   res.json(result.rows);
 });
