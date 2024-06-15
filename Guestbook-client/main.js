@@ -7,13 +7,16 @@ async function butSubmit(event) {
   const formValues = Object.fromEntries(formData);
   console.log(formValues);
   try {
-    const check = await fetch("http://localhost:8080/messages", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formValues),
-    });
+    const check = await fetch(
+      "https://week-4-project-guestbook-server.onrender.com/messages",
+      {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formValues),
+      }
+    );
 
     const data = await check.json();
     console.log(body);
@@ -32,7 +35,9 @@ let messageList = document.querySelector("#message-list");
 let b1 = document.getElementById("b1");
 
 async function findMessages() {
-  const response = await fetch("http://localhost:8080/message-list");
+  const response = await fetch(
+    "https://week-4-project-guestbook-server.onrender.com/message-list"
+  );
   const messageValues = await response.json();
   messageList.textContent = "";
   messageValues.forEach((message) => {
