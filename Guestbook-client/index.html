@@ -17,12 +17,18 @@
       </h3>
       <form id="gbform">
         <label for="username">Username:</label>
-        <input type="text" name="username" placeholder="Tell us your name!" />
+        <input
+          type="text"
+          name="username"
+          placeholder="Tell us your name!"
+          required
+        />
         <label for="message">Tell us about your visit!</label>
 
         <textarea
           placeholder="What did you get up to during your stay? What was the purpose of your visit?"
           name="message"
+          required
         ></textarea>
 
         <label for="reaction">How was your time with us?</label>
@@ -43,11 +49,11 @@
           <option value="Yes">Yes</option>
           <option value="no">No</option>
         </select>
-        <button type="submit">Submit</button>
+        <button type="submit" id="b1">Submit</button>
       </form>
     </section>
     <section id="bottoms">
-      <div></div>
+      <div id="message-number"></div>
       <ul id="message-list"></ul>
     </section>
   </body>

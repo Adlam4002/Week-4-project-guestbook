@@ -40,3 +40,9 @@ app.get("/message-list", async (req, res) => {
     `);
   res.json(result.rows);
 });
+app.get("/count", async (req, res) => {
+  const result = await db.query(`
+   SELECT COUNT (*) FROM guestbook
+    `);
+  res.json(result.rows);
+});
