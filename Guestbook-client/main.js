@@ -51,7 +51,9 @@ findMessages();
 
 async function showNumber() {
   let counter = document.getElementById("message-number");
-  const response = await fetch("http://localhost:8080/count");
+  const response = await fetch(
+    "https://week-4-project-guestbook-server.onrender.com/count"
+  );
   const messageNumber = await response.json();
   counter.textContent = `Number of visitors that provided feedback: ${messageNumber[0].count}`;
 }
