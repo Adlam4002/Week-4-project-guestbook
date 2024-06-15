@@ -19,7 +19,7 @@ async function butSubmit(event) {
     );
 
     const data = await check.json();
-    console.log(body);
+    console.log(data);
     if (data.success) {
       console.log("Form submitted");
       await findMessages();
