@@ -4,9 +4,9 @@ db.query(`CREATE TABLE IF NOT EXISTS guestbook (
     Username VARCHAR(255),
     message text,
     reaction text,
-    return VARCHAR(32)
+    return_value VARCHAR(32)
 )`);
 db.query(`
-    INSERT INTO guestbook (Username, message, reaction, return)
+    INSERT INTO guestbook (Username, message, reaction, return_value)
     VALUES ('John McDave', 'Lovely place, lots to do, and great for the kids!', '💖', 'yes')
     `);
