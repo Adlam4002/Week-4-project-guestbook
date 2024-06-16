@@ -33,14 +33,26 @@ form.addEventListener("submit", butSubmit);
 let messageList = document.querySelector("#message-list");
 
 let b1 = document.getElementById("b1");
+let filterForm = document.querySelector("#fform");
+
+filterForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  findMessages();
+});
 
 async function findMessages() {
   const response = await fetch(
     "https://week-4-project-guestbook-server.onrender.com/message-list"
   );
   const messageValues = await response.json();
+  const filterValue = document.querySelector("#reactionf").value;
   messageList.textContent = "";
-  messageValues.forEach((message) => {
+
+  const filterMessages = messageValues.filter((message) => {
+    return !filterValue || message.reaction === filterValue;
+  });
+
+  filterMessages.forEach((message) => {
     const messageItem = document.createElement("li");
     messageItem.id = `usernames${message.id}`;
     messageItem.innerHTML = `<p><img src="https://avatar.iran.liara.run/public" alt="Avatar" width="50" height="50"> ${message.username}-${message.reaction}: ${message.message} Would they come back: ${message.return_value}.</p>`;

@@ -12,6 +12,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+#holder {
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+}
 #tops {
   width: 75vw;
   /* height: 50vh; */

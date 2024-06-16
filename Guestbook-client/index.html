@@ -53,7 +53,21 @@
       </form>
     </section>
     <section id="bottoms">
-      <div id="message-number"></div>
+      <div id="holder">
+        <div id="message-number"></div>
+        <form id="fform">
+          <label for="reactionf"></label>
+          <select name="reactionf" id="reactionf">
+            <option value="">All</option>
+            <option value="💖">💖</option>
+            <option value="😁">😁</option>
+            <option value="🙂">🙂</option>
+            <option value="😒">😒</option>
+            <option value="😡">😡</option>
+          </select>
+          <button type="submit">Filter</button>
+        </form>
+      </div>
       <ul id="message-list"></ul>
     </section>
   </body>
