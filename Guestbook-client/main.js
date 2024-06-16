@@ -24,6 +24,8 @@ async function butSubmit(event) {
       console.log("Form submitted");
       await findMessages();
       await showNumber();
+      window.scrollTo(0, document.body.scrollHeight);
+      form.reset();
     }
   } catch (error) {
     console.error("Error:", error);
